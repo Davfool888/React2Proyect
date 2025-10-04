@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import {Button} from './components/index'
 
@@ -15,16 +13,24 @@ const style = {
 
 function App() {
   const [count, setCount] = useState(0)
+  const [name, setName] = useState("Santiago")
 
 const countMore = () =>{
   setCount((count) => count +1)
+  setCount((count) => count +1)
+  setCount((count) => count +1)
+
 }
-  
+
+const changeName= () =>{
+  setName("David")
+}
 
   return (
     <>
       <div>
-        <Button label={`Count is ${count}`} parentMethod={countMore}/>
+        <Button label={`count is ${count}`} parentMethod={ countMore} />
+
         </div>
     </>
   )
